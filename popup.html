@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chrome History Exporter</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-bottom: 20px;
+    }
+    .container {
+      width: 240px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+    h3 {
+      padding-top: 20px;
+    }
+    .time {
+      margin: 0px 0px 20px 10px;
+    }
+    .format {
+      text-align: center;
+    }
+    #csv-label {
+      margin-right: 20px;
+    }
+    label {
+      margin-bottom: .3rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3 class="text-center mb-4">Chrome History Exporter</h3>
+    <form class="time">
+      <input type="radio" id="1day" name="time" value="1">
+      <label for="1day">1 dia</label><br>
+
+      <input type="radio" id="7days" name="time" value="7" checked>
+      <label for="7days">7 dias</label><br>
+
+      <input type="radio" id="30days" name="time" value="30">
+      <label for="30days">30 dias</label><br>
+
+      <input type="radio" id="90days" name="time" value="90">
+      <label for="90days">90 dias</label><br>
+  </form>
+  <form class="format">
+    <input type="radio" id="csv" name="format" value="csv" checked>
+    <label for="csv" id="csv-label">CSV</label>
+
+    <input type="radio" id="json" name="format" value="json">
+    <label for="json">JSON</label>
+  </form>
+  <button id="exportBtn" class="btn btn-primary btn-block">Exportar Histórico</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

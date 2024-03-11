@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome History Exporter",
+  "version": "2.1",
+  "description": "Exporta o histórico do Google Chrome para um ficheiro CSV ou JSON num determinado período de tempo.",
+  "permissions": ["history", "downloads"],
+  "icons": {
+    "16": "icon.png", 
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
